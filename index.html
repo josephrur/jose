@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="es">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="desarrollo web,ingeniero multimedia,digital,multimedia,web,consultoría,soporte,desarrollo,ingeniería multimedia,diseño multimedia,ingenieria multimedia">
+	<meta name="description" content="Ingeniería Multimedia, innovación y creatividad.">
+	<meta name="author" content="Jose Luis Gutierrez, Multimedia Engineer, Ingeniero Multimedia">
+
+	<title>Jose Luis Gutierrez</title>
+	<!--<link rel="stylesheet" href="css/normalize.css">-->
+	<!--<link rel="stylesheet" href="css/reset.css">-->
+	<link rel="stylesheet" href="css/fix.css">
+	<link rel="stylesheet" href="css/my_style.css">
+	<link rel="stylesheet" href="css/animations2.css">
+	<link rel="stylesheet" href="css/col.css">
+	<link rel="stylesheet" href="css/2cols.css">
+	<link href="font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="css/ng_animate.css">-->
+
+</head>
+
+<body>
+
+	<div class="menu-collapsed">
+		<ul>
+			<li><a href="#/profile">Perfil</a></li>
+			<li><a href="#/skills">Habilidades</a></li>
+			<li><a href="#/recent_jobs">Trabajos Recientes</a></li>
+			<li><a href="#/contact">Contacto</a></li>
+		</ul>
+	</div>
+	<div class="burguer">
+		<div class="bar">
+		</div>
+	</div>
+	<div class="navigation_bar">
+		<div class="language_text">
+			<i class="fa fa-flag"></i> . <a href="#">EN</a> . <a href="#">FR</a>
+		</div>
+	</div>
+
+
+	<div id="content" ng-app="vistas" class="{{ pageClass }}" ng-view></div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-animate.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+</body>
+
+</html>

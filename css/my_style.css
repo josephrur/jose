@@ -1,0 +1,585 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@import url(https://fonts.googleapis.com/css?family=Jura);
+
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	background-image: url(../images/gun_metal.png);
+	font-family: 'Jura', serif;
+	font-size: 13px;
+    position: relative;
+	color: #4DCA6A;
+}
+
+.portfolio_bread{
+	position: absolute;;
+	left:48%;
+	text-align: center;
+	padding-top: 8px;
+	font-size: 1.5em;
+	border-bottom: dashed 2px #4DCA6A;
+	color:#fff;
+}
+.portfolio_bread .fa{
+	font-size: 1em;
+	color: #455053;
+}
+#content{
+	background: none;
+	min-height: 640px;
+	//padding-top: 40px;
+}
+
+
+/* MENU
+============================================================================= */
+
+
+.navigation_bar{
+	position: relative;
+	min-height: 54px;
+	//background:#fff;
+	//background: rgba(255,255,255,0.6);
+	//background:#F2F5F6;
+	background: none;
+	border-bottom: dashed 2px #4DCA6A;
+}
+.burguer{
+  position: absolute;
+  top: 8px;
+  left: 14%;
+  height: 36px;
+  width: 36px;
+  z-index: 10000;
+  cursor: pointer;
+}
+.menu-collapsed {
+  transition: all .25s;
+  position: absolute;
+  top: 8px;
+  left: 14%;
+  height: 36px;
+  width: 36px;
+  z-index: 10000;
+  //border: solid 1px red;
+}
+.menu-collapsed ul {
+  transition: all .05s;
+  position: fixed;
+  left: -9000px;
+  height: inherit;
+}
+
+.bar {
+  position: absolute;
+  left: 14%;
+  top: 22px;
+  height: 4px;
+  width: 32px;
+  border-radius: 15px;
+  background: #4DCA6A;
+}
+.bar:before {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  height: 4px;
+  width: 32px;
+  border-radius: 15px;
+  background: #4DCA6A;
+}
+.bar:after {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 4px;
+  width: 32px;
+  border-radius: 15px;
+  background: #4DCA6A;
+}
+
+.menu-expanded {
+  transition: all .25s;
+  text-align: center;
+  line-height: 150px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  left: 0;
+  background: #4DCA6A;
+  //overflow: hidden;
+  //background: rgba(77,202,106,0.9);
+	
+}
+.menu-expanded ul {
+  transition: all .05s;
+  position: relative;
+  left: 0;
+  z-index: 10000;
+  list-style: none;
+  //overflow:hidden;
+
+}
+.menu-expanded a {
+  transition: all .15s;
+  text-decoration: none;
+  color: #000;
+  font-size: 2em;
+  //font-family: 'Quicksand', sans-serif;
+  padding: 5px;
+}
+.menu-expanded a:hover {
+  transition: all .15s;
+  //letter-spacing: 3px;
+  font-size: 3em;
+	color: #FFCF79;
+}
+.bar2 {
+  background-color: none;
+  transition: all .25s;
+  z-index: 10000;
+  background: none;
+}
+.bar2:before {
+  background-color: #FFCF79;
+  transition: all .25s;
+  content: "";
+  transform: rotate(45deg);
+  top: -0px;
+}
+.bar2:after {
+  background-color: #FFCF79;
+  transition: all .25s;
+  content: "";
+  transform: rotate(-45deg);
+  top: 0px;
+}
+.language_text{
+	position: absolute;
+	top:35%;
+	right: 14%;
+}
+.language_text a{
+	color: #FFCF79;
+	text-decoration: none;
+}
+.language_text .fa{
+	color: #4DCA6A;
+}
+
+/* PERFIL
+============================================================================= */
+
+.perfil {
+	position: relative;
+	margin: 0 14%;
+	background: none;
+}
+.saludo {
+	text-align: left;
+	padding: 40px 0 0 0;
+	
+}
+.saludo h1{
+	font-size: 4em;
+	color: #4DCA6A;
+}
+.presentacion {
+	text-align: justify;
+	font-size: 1.5em;
+	color: #fff;
+	//color: #455053;
+}
+
+
+
+/* HABILIDADES
+============================================================================= */
+#skills {
+	position: relative;
+	margin: 0 14%;
+	background: none;
+	height: 720px;
+}
+
+.charts {
+  padding: 40px 0 0 0;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.chart {
+  //margin: 30px 0 0;
+  background:none;
+}
+.chart__bar {
+  height: 30px;
+  //margin-bottom: 10px;
+  background: linear-gradient(to left, #4DCA6A, #54E375);
+  opacity: 0;
+  
+}
+.chart__bar._85 {
+  animation: 4s s85 ease forwards;
+  width: 85%;
+}
+.chart__bar._75 {
+animation: 4s s75 ease forwards;
+  width: 75%;
+}
+.chart__bar._70 {
+  animation: 4s s70 ease forwards;
+  width: 70%;
+}
+.chart__bar._65 {
+  animation: 4s s65 ease forwards;
+  width: 65%;
+}
+
+.chart__label {
+  padding-left: 10px;
+  line-height: 30px;
+  color: #000;
+}
+.my_bar {
+	position: relative;
+	border: dashed 1px #4DCA6A;
+	margin-bottom: 10px;
+}
+.numbers_foot {
+	position: relative;
+
+}
+.number {
+	position: absolute;
+	top: 26%;
+	left:95%;
+	color:yellow;
+	width: 34px;
+	height: 24px;
+	text-align: center;
+	font-size: 1.2em;
+	visibility: hidden;
+}
+.number_0 {
+	position: absolute;
+	top: 26%;
+	left:0%;
+	color:yellow;
+	width: 34px;
+	height: 24px;
+	text-align: center;
+	font-size: 1.2em;
+}
+.number_50 {
+	position: absolute;
+	top: 26%;
+	left:50%;
+	color:yellow;
+	width: 34px;
+	height: 24px;
+	text-align: center;
+	font-size: 1.2em;
+}
+.number_100 {
+	position: absolute;
+	top: 26%;
+	left:96%;
+	color:yellow;
+	width: 40px;
+	height: 24px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+@keyframes s85 {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+    opacity: 1;
+  }
+}
+
+@keyframes s75 {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 75%;
+    opacity: 1;
+  }
+}
+
+@keyframes s70 {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 70%;
+    opacity: 1;
+  }
+}
+
+@keyframes s65 {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 65%;
+    opacity: 1;
+  }
+}
+
+
+/* TRABAJOS RECIENTES
+============================================================================= */
+#recent_jobs{
+	position: relative;
+	margin: 0 14%;
+	background: none;
+	//height: 720px;
+}
+
+.image_thumb{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0;
+	padding:4px;
+	border: dashed 2px #4DCA6A;
+}
+.image_thumb .image_overlay{
+	background: #000;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.image_thumb:hover .image_overlay { 
+	opacity: 0.9; 
+}
+.image_thumb .image_overlay .fa{
+	background: #EEE;
+	border-radius: 50%;
+	color: #444;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	opacity: 1;
+	/*http: //www.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/; */
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.image_thumb a:hover { 
+	text-decoration: none; 
+}
+
+
+/* CONTACTO
+============================================================================= */
+
+.contacto {
+	margin: 0 14%;
+}
+
+.info {
+//width: 100%;
+}
+.info li {
+	text-align: left;
+	font-size: 1.5em;
+	color: #fff;
+	padding: 20px;
+}
+.info .fa {
+	font-size: 1.4em;
+	color:#4DCA6A;
+}
+
+.formulario .form-control
+{
+	background: transparent;
+	border: 1px solid #444;
+	border-radius: 0px;
+	color: #FFF;
+	margin: 10px 0 10px 0;
+	font-size: 1.2em;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom: dashed 2px #4DCA6A;
+	width: 100%;
+	
+}
+.formulario input { 
+	padding:15px 10px 0 10px;
+
+}
+.formulario textarea { 
+
+	padding:15px 10px 0 10px;
+
+}
+.formulario .form-control:focus{
+	outline: none !important;
+   
+    box-shadow: none;
+}
+.formulario .form-comtrolinput[type="submit"]{
+	color: #FFF;
+	font-weight: 600;
+	letter-spacing: 1px;
+	//width: 220px;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.formulario input[type="submit"]:hover{
+	background: #EBBC2D;
+	border-color: transparent;
+	color: #FFF;
+}
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button.gibson-four {
+	border: 2px solid #4DCA6A;
+	color: #FFF;
+}
+a.animated-button.gibson-four:after {
+	opacity: 0;
+	background-image: -webkit-linear-gradient( transparent 50%, rgba(101,179,122,0.2) 50%);
+	background-image: -moz-linear-gradient(transparent 50%, rgba(101,179,122,0.2) 50%);
+	background-size: 10px 10px;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%));
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+a.animated-button.gibson-four:hover:after {
+	height: 600% !important;
+	opacity: 1;
+	color: #FFF;
+}
+
+/* MEDIA QUERIES
+============================================================================= */
+
+
+/* Extra small devices (phones, less than 768px) */
+
+@media (max-width: 768px) {
+
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+	
+}
