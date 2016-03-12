@@ -1,2 +1,2 @@
-# josegutierrez
-José Luis Gutiérrez's github portfolio
+# José Luis Gutiérrez 
+Ingeniero Multimedia - Desarrollador Frontend
